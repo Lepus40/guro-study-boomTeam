@@ -27,7 +27,6 @@
 	
 	<bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.study.boom"></property>
-		<property name="annotationClass" value="com.study.boom.anno.DefaultMapper" />
 		<property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate" />
 	</bean>
 	
