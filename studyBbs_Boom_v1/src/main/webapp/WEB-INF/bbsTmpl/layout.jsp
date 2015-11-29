@@ -12,7 +12,7 @@
 <tiles:insertAttribute name="resource" defaultValue="" />
 </head>
   	<body>
- 		<H1>3조 게시판aa</H2>
+ 		<H1>3조 게시판a</H2>
   		<tiles:insertAttribute name="body" />
   	</body>
 </html>

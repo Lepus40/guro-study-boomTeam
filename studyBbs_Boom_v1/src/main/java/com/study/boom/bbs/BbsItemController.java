@@ -30,7 +30,7 @@ public class BbsItemController
 		{
 			BbsItem bbsItem = new BbsItem();
 			List<BbsItem> items = bbsItemServiceImpl.findItems(bbsItem);
-
+			
 			map.addAttribute("jsonData", new ObjectMapper().writeValueAsString(items));
 		}
 		catch (IOException e)
@@ -38,12 +38,6 @@ public class BbsItemController
 			e.printStackTrace();
 		}
 		return "bbs/list";
-	}
-
-	@RequestMapping(value = "/write")
-	public String write()
-	{
-		return "bbs/write";
 	}
 
 }
