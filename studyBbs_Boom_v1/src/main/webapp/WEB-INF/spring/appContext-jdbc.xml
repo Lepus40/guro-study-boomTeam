@@ -7,8 +7,8 @@
 
     <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://serenatte.iptime.org:7778/boom"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://serenatte.iptime.org:7778/boom" />
 		<property name="username" value="boom" />
 		<property name="password" value="boom" />
 	</bean>
@@ -22,12 +22,11 @@
 	</bean>
 
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 	
 	<bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.study.boom"></property>
-		<property name="annotationClass" value="com.study.boom.anno.DefaultMapper" />
+		<property name="basePackage" value="com.study.boom" />
 		<property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate" />
 	</bean>
 	
