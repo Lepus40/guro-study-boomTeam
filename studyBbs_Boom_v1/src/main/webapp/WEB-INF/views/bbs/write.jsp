@@ -42,29 +42,30 @@
 
 <table border="1" align="center" align="center" width="600px" cellpadding=0 cellspacing=0>
 	<form id="writeForm">
-	<tr align="center" width="600px">
-		<td>글제목 : </td>
-		<td><input type="text" name="title" id="titleId"/></td>
-	</tr>
-	<tr align="center" width="600px">
-		<td colspan="2">글내용</td>
-		</tr>
-		<tr>
-		<td colspan="2" align="center" width="600px"><textarea name="content" cols="70px" rows="20px" id="contentId"></textarea></td>
-	</tr>
 		<tr align="center" width="600px">
-		<td>아이디 : </td>
-		<td><input type="text" name="id" id="idId"/></td>
-	</tr>
-	<tr align="center" width="600px">
-		<td>비밀번호 : </td>
-		<td><input type="password" name="password" id="passwordId"/></td>
-	</tr>
-	<tr align="center">
-	<td colspan="2">
-		<input type="button" value="글쓰기" id="submitBtn"/>
-		<input type="reset" value="다시쓰기"/>
-		<input type="button" value="글목록"/>
-		</td>	</tr>
+			<td>글제목 : </td>
+			<td><input type="text" name="title" id="titleId"/></td>
+		</tr>
+		<tr align="center" width="600px">
+			<td colspan="2">글내용</td>
+			</tr>
+			<tr>
+			<td colspan="2" align="center" width="600px"><textarea name="content" cols="70px" rows="20px" id="contentId"></textarea></td>
+		</tr>
+			<tr align="center" width="600px">
+			<td>아이디 : </td>
+			<td><input type="text" name="id" id="idId"/></td>
+		</tr>
+		<tr align="center" width="600px">
+			<td>비밀번호 : </td>
+			<td><input type="password" name="password" id="passwordId"/></td>
+		</tr>
+		<tr align="center">
+		<td colspan="2">
+			<input type="button" value="글쓰기" id="submitBtn"/>
+			<input type="reset" value="다시쓰기"/>
+			<input type="button" value="글목록"/>
+			</td>	
+		</tr>
 	</form>
 </table>

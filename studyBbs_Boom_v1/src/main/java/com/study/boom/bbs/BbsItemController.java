@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -31,13 +32,33 @@ public class BbsItemController
 			BbsItem bbsItem = new BbsItem();
 			List<BbsItem> items = bbsItemServiceImpl.findItems(bbsItem);
 
-			map.addAttribute("jsonData", new ObjectMapper().writeValueAsString(items));
+			map.addAttribute("result", items);
+			map.addAttribute("jsonData", new ObjectMapper().writeValueAsString(map));
 		}
 		catch (IOException e)
 		{
 			e.printStackTrace();
 		}
 		return "bbs/list";
+	}
+
+	@RequestMapping(value = "/view/{itemId}")
+	public String view(ModelMap map, @PathVariable(value = "itemId") Long itemId)
+	{
+		try
+		{
+			BbsItem bbsItem = new BbsItem();
+			bbsItem.setId(itemId);
+
+			map.addAttribute("result", bbsItemServiceImpl.findItem(bbsItem));
+			map.addAttribute("jsonData", new ObjectMapper().writeValueAsString(map));
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+
+		return "bbs/view";
 	}
 
 	@RequestMapping(value = "/write")

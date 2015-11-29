@@ -18,4 +18,12 @@
 		SELECT * FROM BOARD
 	]]>	
 	</select>
+	
+	<select id="findItem" parameterType="com.study.boom.bbs.BbsItem" resultMap="bbsItemResult">
+	<![CDATA[
+		SELECT * FROM BOARD
+		WHERE ID = #{id}
+	]]>
+	</select>
+	
 </mapper>

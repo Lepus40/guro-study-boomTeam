@@ -4,14 +4,27 @@
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 <tiles:insertDefinition name="bbs">
 <tiles:putAttribute name="resource">
+<%@ include file="/resources/tmpl/list.tmpl" %>
 <script type="text/javascript">
 $(function() {
 	var jsonData = ${jsonData};
+	$('#bbsList').tmpl(jsonData).appendTo($('.wrap'));
 	console.log(jsonData);
+	
+	$('.title').click(function() {
+		alert($(this).attr('id'));
+	});
+	doSubmit = function(action) {
+		var f = $('<form style="margin:0px;"></form>').attr('target', '_self').appendTo('body');
+		f.attr({'action' : action, 'method' : 'GET'});
+		f.get(0).submit();
+	}
 });
 </script>
 </tiles:putAttribute>
 <tiles:putAttribute name="body">
 테스트 list입니다.
+<div class="wrap">
+</div>
 </tiles:putAttribute>
 </tiles:insertDefinition>
