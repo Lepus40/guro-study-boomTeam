@@ -1,4 +1,4 @@
-/*!
+/*! 
  * $ T emplates Plugin 1.0.4
  * https://github.com/KanbanSolutions/jquery-tmpl
  *
