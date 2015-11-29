@@ -10,9 +10,20 @@
 <head>
 <title>3조</title>
 <tiles:insertAttribute name="resource" defaultValue="" />
+<script type="text/javascript">
+doSubmit = function(action) {
+	var f = $('<form style="margin:0px;"></form>').attr('target', '_self').appendTo('body');
+	f.attr({'action' : getContextPath() + action, 'method' : 'GET'});
+	f.get(0).submit();
+}
+getContextPath = function() {
+    var hostIndex = location.href.indexOf( location.host ) + location.host.length;
+    return location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
+};
+</script>
 </head>
   	<body>
- 		<H1>3조 게시판aa</H2>
+ 		<H1>3조 게시판</H2>
   		<tiles:insertAttribute name="body" />
   	</body>
 </html>
