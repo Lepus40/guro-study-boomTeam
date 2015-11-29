@@ -2,6 +2,7 @@
 <beansProjectDescription>
 	<version>1</version>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<pluginVersion><![CDATA[3.7.1.201510041102-RELEASE]]></pluginVersion>
 	<configSuffixes>
 		<configSuffix><![CDATA[xml]]></configSuffix>
@@ -23,6 +24,18 @@
 	</configs>
 	<autoconfigs>
 >>>>>>> refs/heads/guroFirst
+=======
+	<pluginVersion><![CDATA[3.6.4.201503051146-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/main/webapp/WEB-INF/spring/appContext-jdbc.xml</config>
+		<config>src/main/webapp/WEB-INF/classes/spring/servlet-context.xml</config>
+	</configs>
+	<autoconfigs>
+>>>>>>> refs/remotes/origin/test1
 		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
 	</autoconfigs>
 	<configSets>
