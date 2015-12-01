@@ -10,6 +10,9 @@ $(function() {
 	var jsonData = ${jsonData};
 	$('#bbsView').tmpl(jsonData).appendTo($('.wrap'));
 });
+$('.listGoBtn').click(function() {
+	doSubmit('/bbs/list');
+});
 </script>
 </tiles:putAttribute>
 <tiles:putAttribute name="body">

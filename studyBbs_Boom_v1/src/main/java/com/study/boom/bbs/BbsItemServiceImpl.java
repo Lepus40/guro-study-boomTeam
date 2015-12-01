@@ -24,4 +24,27 @@ public class BbsItemServiceImpl implements BbsItemService
 		// TODO Auto-generated method stub
 		return bbsItemMapper.findItems(item);
 	}
+
+	@Override
+	public void writeItem(BbsItem item) {
+		bbsItemMapper.writeItem(item);		
+	}
+
+	@Override
+	public void deleteItem(BbsItem item) {
+		bbsItemMapper.deleteItem(item);
+		
+	}
+
+	@Override
+	public void updateItem(BbsItem item) {
+		bbsItemMapper.updateItem(item);
+		
+	}
+
+	@Override
+	public void addHit(String id) {
+		bbsItemMapper.addHit(id);
+		
+	}
 }

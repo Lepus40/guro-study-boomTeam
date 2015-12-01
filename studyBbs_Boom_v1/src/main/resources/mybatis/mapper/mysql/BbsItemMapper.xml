@@ -25,5 +25,45 @@
 		WHERE ID = #{id}
 	]]>
 	</select>
-	
+	<insert id="writeItem" parameterType="com.study.boom.bbs.BbsItem">
+	<![CDATA[
+		INSERT INTO BOARD VALUES(
+		#{id},
+		#{title},
+		#{content},
+		#{author},
+		#{pw},
+		#{writeDate},
+		#{delYn},
+		#{hit}
+		)
+	]]>
+	</insert>
+	<delete id="deleteItem" parameterType="com.study.boom.bbs.BbsItem">
+	<![CDATA[
+		DELETE FROM BOARD WHERE ID = #{id} AND PW = #{pw}
+	]]>
+	</delete>
+	<update id="updateItem" parameterType="com.study.boom.bbs.BbsItem">
+	<![CDATA[
+		UPDATE BOARD 
+		SET 
+		TITLE = #{title}, 
+		CONTENT = #{content},
+		AUTHOR = #{author}, 
+		WRITE_DATE = #{writeDate}, 
+		DEL_YN = #{delYn}
+		WHERE 
+		ID = #{id} AND PW = #{pw}
+	]]>
+	</update>
+	<update id="addHit" parameterType="String">
+	<![CDATA[
+		UPDATE BOARD 
+		SET 
+		HIT = (SELECT HIT FROM BOARD WHERE = #{id})
+		WHERE 
+		ID = #{id}
+	]]>
+	</update>
 </mapper>
