@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<script id="bbsView" type="text/x-jquery-tmpl">
+<h3 align="center">-{%= result.title %}({%= result.hit %})-</h3>
+<table border="1" align="center" align="center" width="600px"
+	cellpadding=0 cellspacing=0>
+	<form>
+		<tr align="center" width="600px">
+			<td>글쓴이 </td>
+			<td>{%= result.author %}</td>
+			<td>작성시간! </td>
+			<td>{%= result.writeDate %}</td>
+		</tr>
+	<tr align="center" width="600px">
+		<td colspan="4">글제목  {%= result.title %}</td>
+	</tr>
+	<tr align="center" width="600px">
+		<td colspan="4">글내용</td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center" width="600px"><textarea
+				name="content" cols="70px" rows="20px">
+			{%= result.content %}
+		</textarea></td>
+	</tr>
+	<tr align="center">
+		<td colspan="4"><input type="submit" value="글수정" /> <input
+			type="reset" value="글삭제" /> <input type="button" value="글목록" class="listGoBtn"/></td>
+	</tr>
+	</form>
+	
+</table>
+</script>   
